@@ -5,12 +5,12 @@
   const stars = [...document.querySelectorAll(".star-point")];
   const modal = $("#star-modal");
   const messages = [
-    {title:"Your kind of magic", message:"You have a way of making ordinary conversations feel a little less ordinary. That's a pretty lovely thing."},
-    {title:"A little reminder", message:"You don't have to be the loudest person in the room to make a difference. Your presence counts, exactly as it is."},
-    {title:"The tiny details", message:"I hope you know that the little things you do — the way you laugh, the things you notice — can make someone's day."},
+    {title:"After Hours vibe", message:"You have that After Hours kind of vibe — a little mysterious, effortlessly cool, and impossible to mistake for anyone else. Some people are a whole mood. You're the entire playlist. 🌙🖤"},
+    {title:"Face card never declines", message:"Nykaa can deliver all the makeup in the world, but the real glow was already there. The makeup is the slay, but the girl wearing it? The actual masterpiece. 💄🎀"},
+    {title:"My favourite plot twist", message:"Out of all the random people the universe could've put in my orbit, I'm genuinely glad it was you. You have your own kind of magic — the kind that makes a normal conversation feel like the best part of the day. And yes, this is me being a little cheesy. Don't let it get to your head, baddie. 🤭💗"},
     {title:"Main-character energy", message:"May you always find reasons to be curious, things that make you laugh until your cheeks hurt, and people who cheer you on."},
-    {title:"A wish for you", message:"I hope something unexpectedly good happens to you soon. The kind of good that makes you smile to yourself on the way home."},
-    {title:"Keep being you", message:"You don't need to have everything figured out. You're allowed to grow, change your mind, and take life one little adventure at a time."},
+    {title:"The outfit is never the whole story", message:"Savana could give you a hundred new outfits and you'd somehow make every single one look like it was designed exclusively for you. But let's be honest — the outfit gets attention, and you make me remember. 👗✨"},
+    {title:"Born to be iconic", message:"If confidence had a bias, it would be you. If charisma had a face card, it would be yours. BTS has seven legends, but somehow you still found a way to be iconic in your own universe. 💜"},
     {title:"The rarest star", message:"Out of all the stars in this tiny galaxy, this one says: I'm glad our paths crossed. Here's to finding more reasons to smile. ♡"}
   ];
   const found = new Set();
