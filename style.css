@@ -62,6 +62,21 @@ h1 em,h2 em{font-weight:500;color:var(--pink)}
 .modal-close{position:absolute;right:13px;top:11px;border:0;background:transparent;color:#a99bbf;font-size:26px;cursor:pointer}.modal-star{font-size:37px;color:#ffe3a7;text-shadow:0 0 24px #ffb0e8;margin:0 0 13px}.modal-card .eyebrow{margin-bottom:10px;font-size:8px}.modal-card h2{font-size:29px;color:#fff0fc}.modal-message{font-family:'Playfair Display',serif;font-size:17px;line-height:1.7;color:#d8cbe9;margin:17px 0 23px;min-height:85px}
 .modal-footer{border-top:1px solid rgba(255,255,255,.09);padding-top:15px;display:flex;justify-content:space-between;align-items:center;gap:12px}.modal-footer span{font-size:8px;letter-spacing:.12em;color:#9285b0}.next-star{border:0;background:transparent;color:#ffb8e5;font-size:11px;font-weight:600;cursor:pointer;padding:8px}
 .toast{position:fixed;z-index:20;bottom:calc(25px + env(safe-area-inset-bottom));left:50%;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:#f6d8ff;color:#26153c;border-radius:99px;padding:11px 16px;font-size:11px;box-shadow:0 5px 25px rgba(0,0,0,.25);transition:opacity .25s,transform .25s;white-space:nowrap}.toast.show{opacity:1;transform:translate(-50%,0)}
+.music-toggle {
+  position: fixed;
+  right: 16px;
+  bottom: calc(22px + env(safe-area-inset-bottom));
+  z-index: 30;
+  padding: 11px 15px;
+  border: 1px solid rgba(255, 180, 235, 0.5);
+  border-radius: 30px;
+  background: rgba(28, 17, 52, 0.92);
+  color: #ffc5eb;
+  font-size: 11px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 18px rgba(255, 130, 220, 0.15);
+  cursor: pointer;
+}
 @media(min-width:650px){.app-shell{padding-left:35px;padding-right:35px}.screen{min-height:calc(100svh - 140px);padding-top:45px}.welcome-screen{padding-top:30px}.moon{width:88px;height:88px}.intro{font-size:14px}.galaxy-stage{width:380px}.section-heading h2,.constellation-screen h2,.secret-screen h2{font-size:48px}.letter{padding:27px 30px}.letter p{font-size:15px}}
 @media(max-height:700px){.screen{padding-top:20px}.moon{width:58px;height:58px;margin-bottom:20px}.intro{margin:15px 0 20px}.galaxy-stage{width:min(82vw,320px);margin-top:10px}.constellation-art{width:min(65vw,250px);margin-top:8px}.letter{margin:14px 0;padding:17px 19px}.letter p{font-size:13px;margin-bottom:9px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}

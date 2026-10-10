@@ -71,7 +71,37 @@
     showToast("A new star is twinkling for you ↗");
   }
 
-  $("#begin-btn").addEventListener("click", () => showScreen("explore"));
+const music = document.getElementById("bg-music");
+const musicToggle = document.getElementById("music-toggle");
+
+let musicPlaying = false;
+
+async function startMusic() {
+  try {
+    music.volume = 0.35;
+    await music.play();
+
+    musicPlaying = true;
+    musicToggle.textContent = "♫ Music: ON";
+  } catch (error) {
+    musicToggle.textContent = "♫ Tap for music";
+  }
+}
+
+$("#begin-btn").addEventListener("click", async () => {
+  showScreen("explore");
+  await startMusic();
+});
+
+musicToggle.addEventListener("click", async () => {
+  if (musicPlaying && !music.paused) {
+    music.pause();
+    musicPlaying = false;
+    musicToggle.textContent = "♫ Music: OFF";
+  } else {
+    await startMusic();
+  }
+});
   stars.forEach(star => star.addEventListener("click", () => openStar(Number(star.dataset.star))));
   $("#modal-close").addEventListener("click", closeModal);
   $("#next-star").addEventListener("click", goNext);
