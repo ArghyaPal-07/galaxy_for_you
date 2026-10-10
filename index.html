@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#09051b">
+  <meta name="description" content="A tiny universe made of stars, little surprises, and kind words.">
+  <title>A Little Universe For You ✦</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="sky" aria-hidden="true"></canvas>
+  <div class="nebula nebula-one" aria-hidden="true"></div>
+  <div class="nebula nebula-two" aria-hidden="true"></div>
+
+  <main class="app-shell">
+    <header class="topbar">
+      <a class="wordmark" href="#" aria-label="A Little Universe home"><span class="brand-star">✦</span> little universe</a>
+      <div class="progress-wrap" aria-label="Stars discovered">
+        <span id="progress-label">0 / 7 stars</span>
+        <div class="progress-track"><span id="progress-bar"></span></div>
+      </div>
+    </header>
+
+    <section class="screen welcome-screen active" id="welcome">
+      <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+      <div class="moon" aria-hidden="true"><span></span></div>
+      <p class="eyebrow">A SMALL SURPRISE FOR YOU</p>
+      <h1>A Little Universe<br><em>For You</em><span class="title-sparkle">✧</span></h1>
+      <p class="intro">Somewhere between all the stars,<br>there are a few little things I wanted you to know.</p>
+      <button class="primary-button" id="begin-btn">Step inside <span>↗</span></button>
+      <p class="microcopy">Best explored with sound on · but totally optional</p>
+      <div class="bottom-hint"><span class="tiny-dot"></span> made of stardust & good thoughts</div>
+    </section>
+
+    <section class="screen explore-screen" id="explore" aria-label="Explore the galaxy">
+      <div class="section-heading">
+        <p class="eyebrow">YOUR LITTLE NIGHT SKY</p>
+        <h2>Explore the galaxy<span class="pink">.</span></h2>
+        <p>Tap a glowing star to discover a little note.<br>There are seven waiting for you.</p>
+      </div>
+      <div class="galaxy-stage" id="galaxy-stage">
+        <div class="galaxy-core"></div>
+        <div class="galaxy-ring ring-one"></div><div class="galaxy-ring ring-two"></div>
+        <div class="planet planet-lilac"></div><div class="planet planet-blue"></div>
+        <button class="star-point star-1" data-star="0" aria-label="Discover star one"><span>✦</span></button>
+        <button class="star-point star-2" data-star="1" aria-label="Discover star two"><span>✧</span></button>
+        <button class="star-point star-3" data-star="2" aria-label="Discover star three"><span>✦</span></button>
+        <button class="star-point star-4" data-star="3" aria-label="Discover star four"><span>✧</span></button>
+        <button class="star-point star-5" data-star="4" aria-label="Discover star five"><span>✦</span></button>
+        <button class="star-point star-6" data-star="5" aria-label="Discover star six"><span>✧</span></button>
+        <button class="star-point star-7" data-star="6" aria-label="Discover star seven"><span>✦</span></button>
+        <div class="stage-label label-top">the softest corner of the cosmos</div>
+      </div>
+      <div class="discovery-note"><span class="note-icon">✧</span><span id="discovery-hint">Your first little star is waiting.</span></div>
+      <button class="text-button" id="ending-shortcut" hidden>See what you've found →</button>
+    </section>
+
+    <section class="screen constellation-screen" id="constellation">
+      <p class="eyebrow">LOOK WHAT YOU MADE</p>
+      <h2>A constellation<br><em>of little things.</em></h2>
+      <div class="constellation-art" aria-hidden="true">
+        <svg viewBox="0 0 320 240" role="img">
+          <defs><filter id="glow"><feGaussianBlur stdDeviation="4" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+          <path d="M160 26 L203 75 L267 83 L220 130 L231 193 L160 160 L91 193 L101 130 L53 83 L117 75 Z" fill="none" stroke="rgba(255,170,226,.5)" stroke-width="1.4" stroke-dasharray="3 5"/>
+          <path d="M160 26 L203 75 L267 83 L220 130 L231 193 L160 160 L91 193 L101 130 L53 83 L117 75 Z" fill="none" stroke="#ffc2ef" stroke-width="1.2" filter="url(#glow)"/>
+          <g fill="#fff1fb" filter="url(#glow)"><circle cx="160" cy="26" r="4"/><circle cx="203" cy="75" r="3.5"/><circle cx="267" cy="83" r="4"/><circle cx="220" cy="130" r="3.5"/><circle cx="231" cy="193" r="4"/><circle cx="160" cy="160" r="4.5"/><circle cx="91" cy="193" r="4"/><circle cx="101" cy="130" r="3.5"/><circle cx="53" cy="83" r="4"/><circle cx="117" cy="75" r="3.5"/></g>
+        </svg>
+        <div class="constellation-heart">♡</div>
+      </div>
+      <p class="constellation-copy">Seven little stars, seven little reminders:<br>the world is a bit nicer with people like you in it.</p>
+      <button class="primary-button" id="secret-btn">One last thing <span>♡</span></button>
+      <p class="microcopy">No big declarations. Just a little honesty.</p>
+    </section>
+
+    <section class="screen secret-screen" id="secret">
+      <div class="secret-glow"></div>
+      <div class="envelope">✉</div>
+      <p class="eyebrow">A NOTE FROM ME TO YOU</p>
+      <h2>Hey, you.<br><em>One last thing.</em></h2>
+      <article class="letter">
+        <p>I made this little corner of the internet because you deserve a reminder that you're pretty wonderful.</p>
+        <p>I like getting to know you, hearing your thoughts, and seeing the little things that make you <span class="editable-name">you</span>.</p>
+        <p>So here's to more random conversations, silly laughs, and moments that turn an ordinary day into a good one. No pressure to make it anything more than that — I just wanted to make you smile. ♡</p>
+        <div class="letter-signoff">from someone who thinks you're pretty great <span>✦</span></div>
+      </article>
+      <button class="primary-button" id="again-btn">Wander the stars again <span>↺</span></button>
+      <p class="microcopy">P.S. You can keep this little universe.</p>
+    </section>
+
+    <footer class="footer">
+      <span>✦</span> a little kindness, sent across the cosmos <span>✦</span>
+    </footer>
+  </main>
+
+  <div class="modal-backdrop" id="star-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+    <div class="modal-card">
+      <button class="modal-close" id="modal-close" aria-label="Close note">×</button>
+      <div class="modal-star" id="modal-star">✦</div>
+      <p class="eyebrow">A STAR JUST FOR YOU</p>
+      <h2 id="modal-title">A little reminder</h2>
+      <p id="modal-message" class="modal-message"></p>
+      <div class="modal-footer"><span id="modal-count">STAR 1 OF 7</span><button class="next-star" id="next-star">Next star →</button></div>
+    </div>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
